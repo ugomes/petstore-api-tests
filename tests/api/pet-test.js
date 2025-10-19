@@ -33,7 +33,7 @@ describe('Teste - Pets', () => {
                     .expectJsonLike(petData.pet)
                     .inspect();
                 
-                console.log(`✓ Validação bem-sucedida (tentativa ${attempt}/5)`);
+                console.log(`Validação bem-sucedida (tentativa ${attempt}/5)`);
                 return;
             } catch (error) {
                 if (attempt === 5) throw error;
@@ -63,7 +63,7 @@ describe('Teste - Pets', () => {
                     .expectJsonLike(petDataPut.pet)
                     .inspect();
                 
-                console.log(`✓ Validação bem-sucedida (tentativa ${attempt}/5)`);
+                console.log(`Validação bem-sucedida (tentativa ${attempt}/5)`);
                 return;
             } catch (error) {
                 if (attempt === 5) throw error;

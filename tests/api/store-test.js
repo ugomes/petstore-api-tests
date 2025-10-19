@@ -87,7 +87,7 @@ describe('Teste - Store', () => {
                 return;
             } catch (error) {
                 if (attempt === 3) throw error;
-                console.log(`⟳ Tentativa ${attempt}/3...`);
+                console.log(`Tentativa ${attempt}/3...`);
                 await sleep(2000);
             }
         }

@@ -8,7 +8,7 @@ describe('Teste - Usuários', () => {
     const username = userData.user.username;
     
     before(() => {
-        console.log(`\n🚀 Iniciando testes com USER: ${username}\n`);
+        console.log(`\n Iniciando testes com USER: ${username}\n`);
     });
 
     it('POST - Deve criar um novo usuário', async () => {
@@ -34,7 +34,7 @@ describe('Teste - Usuários', () => {
                     .expectStatus(200)
                     .expectJsonLike(userData.user)
                     .inspect();
-                console.log(`✓ Validação bem-sucedida (tentativa ${attempt}/5)`);
+                console.log(`Validação bem-sucedida (tentativa ${attempt}/5)`);
                 return;
             } catch (error) {
                 if (attempt === 5) throw error;
