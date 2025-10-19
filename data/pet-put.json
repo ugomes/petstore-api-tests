@@ -1,0 +1,20 @@
+{
+    "pet": {
+        "id": 231985,
+        "category": {
+            "id": 1,
+            "name": "Dogs"
+        },
+        "name": "Jay",
+        "photoUrls": [
+            "http://example.com/photo1.jpg"
+        ],
+        "tags": [
+            {
+                "id": 1,
+                "name": "Vacinado"
+            }
+        ],
+        "status": "available"
+    }
+}

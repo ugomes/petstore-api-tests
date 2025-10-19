@@ -1,0 +1,28 @@
+{
+  "name": "petstore-api",
+  "version": "1.0.0",
+  "description": "Testes de API com PactumJS - PetStore",
+  "scripts": {
+    "test": "mocha tests/api/**/*.js --timeout 30000 --exit --reporter allure-mocha --reporter-options resultsDir=allure-results",
+    "test:user": "mocha tests/api/user-test.js --timeout 30000 --exit --reporter allure-mocha --reporter-options resultsDir=allure-results",
+    "test:pet": "mocha tests/api/pet-test.js --timeout 30000 --exit --reporter allure-mocha --reporter-options resultsDir=allure-results",
+    "test:store": "mocha tests/api/store-test.js --timeout 30000 --exit --reporter allure-mocha --reporter-options resultsDir=allure-results",
+    "test:watch": "mocha tests/api/**/*.js --watch --timeout 30000",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report",
+    "allure:clean": "node -e \"const fs = require('fs'); ['allure-results', 'allure-report'].forEach(dir => { try { fs.rmSync(dir, { recursive: true, force: true }); } catch(e) {} })\"",
+    "test:allure": "npm test && npm run allure:generate && npm run allure:open",
+    "test:clean": "npm run allure:clean && npm run test:allure"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "^2.34.1",
+    "allure-mocha": "^3.4.1",
+    "chai": "^6.2.0",
+    "mocha": "^11.7.4",
+    "pactum": "^3.8.0"
+  }
+}
+
